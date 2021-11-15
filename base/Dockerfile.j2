@@ -1,0 +1,6 @@
+FROM {{ image_base }}
+
+RUN pip3 install ipython
+ADD ipython_config.py /root/.ipython/profile_default/
+
+

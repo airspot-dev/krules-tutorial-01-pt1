@@ -1,0 +1,5 @@
+FROM {{ image_base }}
+
+RUN pip3 install pandas
+
+ADD ruleset.py /app/ruleset.py

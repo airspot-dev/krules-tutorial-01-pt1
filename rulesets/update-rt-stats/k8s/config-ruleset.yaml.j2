@@ -1,0 +1,17 @@
+apiVersion: krules.airspot.dev/v1alpha1
+kind: ConfigurationProvider
+metadata:
+  name: config-ruleset-{{ app_name }}
+  namespace: {{ namespace }}
+spec:
+  key: rulesets.{{ app_name }}
+  appliesTo:
+    krules.airspot.dev/app: {{ app_name }}
+  data:
+    window_size:
+      seconds: 60
+    speed:
+      normal: 0
+      fast: 8
+      veryfast: 15
+  container: {}

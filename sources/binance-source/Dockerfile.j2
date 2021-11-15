@@ -1,0 +1,8 @@
+FROM {{ image_base }}
+
+# Add binance python library
+RUN pip3 install python-binance
+
+ADD main.py /app/
+CMD ["python3", "/app/main.py"]
+
